@@ -90,7 +90,7 @@
     <Frame name="RematchAutoScrollBoxTemplate" mixin="RematchAutoScrollBoxMixin" virtual="true">
         <Layers>
             <Layer level="BACKGROUND" textureSubLevel="-1">
-                <Texture parentKey="Back" file="Interface\FrameGeneral\UI-Background-Marble" horizTile="true" vertTile="true" setAllPoints="true">
+                <Texture parentKey="Back" file="Interface\Tooltips\UI-Tooltip-Background" horizTile="true" vertTile="true" setAllPoints="true">
                     <Anchors>
                         <Anchor point="TOPLEFT"/>
                         <Anchor point="BOTTOMRIGHT" x="-18" y="0"/>

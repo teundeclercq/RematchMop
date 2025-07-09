@@ -7,7 +7,7 @@ local inWorld -- returned by IsPlayerInWorld; true/false if player is in the wor
 
 rematch.events:Register(rematch.main,"PLAYER_LOGIN",function(self)
 
-    -- Rematch 4.x to Rematch 5.x upgrade should be handled before any other PLAYER_LOGIN
+    -- Rematch 5.x to Rematch 5.x upgrade should be handled before any other PLAYER_LOGIN
     -- (rematch.main is the first to register for PLAYER_LOGIN from toc)
     rematch.convert:ConversionCheck()
 

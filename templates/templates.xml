@@ -11,25 +11,23 @@
 
     <!-- backdrop with just a border -->
     <Frame name="RematchBorderBackdropTemplate" inherits="TooltipBorderBackdropTemplate" virtual="true">
-        <KeyValues>
-            <KeyValue key="backdropBorderColor" value="REMATCH_BORDER_BACKGROUND_COLOR" type="global"/>
-        </KeyValues>
+       <Scripts>
+        <OnLoad function="RematchBorderBackdropTemplate_OnLoad"/>
+        </Scripts>
     </Frame>
 
     <!-- backdrop with just a red border -->
     <Frame name="RematchBorderRedBackdropTemplate" inherits="TooltipBorderBackdropTemplate" virtual="true">
-        <KeyValues>
-            <KeyValue key="backdropBorderColor" value="REMATCH_BORDER_RED_COLOR" type="global"/>
-        </KeyValues>
+        <Scripts>
+        <OnLoad function="RematchBorderRedBackdropTemplate_OnLoad"/>
+    </Scripts>
     </Frame>
 
     <!-- backdrop with a border and a solid dark grey background -->
     <Frame name="RematchSolidBackdropTemplate" inherits="BackdropTemplate" virtual="true">
-        <KeyValues>
-            <KeyValue key="backdropInfo" value="REMATCH_SOLID_BACKDROP_STYLE" type="global"/>
-            <KeyValue key="backdropColor" value="REMATCH_SOLID_DARK_BACKDROP_COLOR" type="global"/>
-            <KeyValue key="backdropBorderColor" value="REMATCH_BORDER_BACKGROUND_COLOR" type="global"/>
-        </KeyValues>
+      <Scripts>
+        <OnLoad function="RematchSolidBackdropTemplate_OnLoad"/>
+      </Scripts> 
     </Frame>
 
     <!-- backdrop with a border and a solid light grey background and a dark shadow over most (tooltips, menus) -->
@@ -41,7 +39,7 @@
         </KeyValues>
         <Layers>
             <Layer level="BACKGROUND" textureSubLevel="1">
-                <Texture parentKey="Shadow" file="Interface\Common\ShadowOverlay-Corner" setAllPoints="true" alpha="1">
+                <Texture parentKey="Shadow" file="Interface\FrameGeneral\UI-Background-Marble" setAllPoints="true" alpha="1">
                     <Anchors>
                         <Anchor point="TOPLEFT" x="3" y="-3"/>
                         <Anchor point="BOTTOMRIGHT" x="-3" y="3"/>

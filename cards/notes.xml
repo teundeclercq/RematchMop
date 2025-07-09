@@ -239,7 +239,7 @@
                 <Layers>
                     <Layer level="BACKGROUND" textureSubLevel="-1">
                         <!-- dark background over content from bottom of Top to bottom -->
-                        <Texture file="Interface\FrameGeneral\UI-Background-Marble" horizTile="true" vertTile="true">
+                        <Texture file="Interface\Tooltips\UI-Tooltip-Background" horizTile="true" vertTile="true">
                             <Anchors>
                                 <Anchor point="TOPLEFT" x="3" y="-40"/>
                                 <Anchor point="BOTTOMRIGHT" x="-3" y="3"/>

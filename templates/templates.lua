@@ -678,3 +678,39 @@ function RematchPetTextureMixin:OnMouseUp(button)
     end
 end
 
+function RematchBorderBackdropTemplate_OnLoad(self)
+    if self.SetBackdrop then
+        self:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8x8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            tile = true, tileSize = 16, edgeSize = 16,
+            insets = { left = 4, right = 4, top = 4, bottom = 4 }
+        })
+        self:SetBackDropColor(0,0,0,1)
+        self:SetBackdropBorderColor(0, 0, 0, 1)
+    end
+end
+
+function RematchBorderRedBackdropTemplate_OnLoad(self)
+    if self.SetBackdrop then
+        self:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8x8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            tile = true, tileSize = 16, edgeSize = 16,
+            insets = { left = 4, right = 4, top = 4, bottom = 4 }
+        })
+        self:SetBackDropColor(0,0,0,1)
+        self:SetBackdropBorderColor(1, 0, 0, 1)
+    end
+end
+
+function RematchSolidBackdropTemplate_OnLoad(self)
+        self:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8x8",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            tile = true, tileSize = 16, edgeSize = 16,
+            insets = { left = 4, right = 4, top = 4, bottom = 4 }
+        })
+        self:SetBackdropColor(0, 0, 0, 1)
+        self:SetBackdropBorderColor(0.5, 0.5, 0.5, 1)
+end
