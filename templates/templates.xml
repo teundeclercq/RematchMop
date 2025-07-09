@@ -232,54 +232,55 @@
 
     <!-- recreating InsetFrameTemplate without the NineSlice stuff or Bg -->
     <Frame name="RematchInsetFrameTemplate" virtual="true">
-        <Layers>
-            <Layer level="BORDER" textureSubLevel="-1">
-                <Texture parentKey="TopLeft" atlas="UI-Frame-InnerTopLeft" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="TOPLEFT"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="TopRight" atlas="UI-Frame-InnerTopRight" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="TOPRIGHT"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="Top" atlas="_UI-Frame-InnerTopTile" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="TOPRIGHT"/>
-                        <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="TOPLEFT"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="BottomLeft" atlas="UI-Frame-InnerBotLeftCorner" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="BOTTOMLEFT" x="0" y="-1"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="BottomRight" atlas="UI-Frame-InnerBotRight" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="BOTTOMRIGHT" x="0" y="-1"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="Bottom" atlas="_UI-Frame-InnerBotTile" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="BOTTOMRIGHT"/>
-                        <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="BOTTOMLEFT"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="Left" atlas="!UI-Frame-InnerLeftTile" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="BOTTOMLEFT"/>
-                        <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="TOPLEFT"/>
-                    </Anchors>
-                </Texture>
-                <Texture parentKey="Right" atlas="!UI-Frame-InnerRightTile" useAtlasSize="true">
-                    <Anchors>
-                        <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="BOTTOMRIGHT"/>
-                        <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="TOPRIGHT"/>
-                    </Anchors>
-                </Texture>
-            </Layer>
-        </Layers>
+      <Layers>
+      <Layer level="BORDER">
+        <!-- 8px tooltip-border corners and edges -->
+        <Texture parentKey="TopLeft" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8" y="8"/><TexCoords left="0" right="0.125" top="0" bottom="0.125"/>
+          <Anchors><Anchor point="TOPLEFT"/></Anchors>
+        </Texture>
+        <Texture parentKey="TopRight" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8" y="8"/><TexCoords left="0.375" right="0.5" top="0" bottom="0.125"/>
+          <Anchors><Anchor point="TOPRIGHT"/></Anchors>
+        </Texture>
+        <Texture parentKey="BottomLeft" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8" y="8"/><TexCoords left="0" right="0.125" top="0.125" bottom="0.25"/>
+          <Anchors><Anchor point="BOTTOMLEFT"/></Anchors>
+        </Texture>
+        <Texture parentKey="BottomRight" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8" y="8"/><TexCoords left="0.375" right="0.5" top="0.125" bottom="0.25"/>
+          <Anchors><Anchor point="BOTTOMRIGHT"/></Anchors>
+        </Texture>
+        <Texture parentKey="Top" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size y="8"/><TexCoords left="0.125" right="0.375" top="0" bottom="0.125"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="TOPRIGHT"/>
+            <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="TOPLEFT"/>
+          </Anchors>
+        </Texture>
+        <Texture parentKey="Bottom" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size y="8"/><TexCoords left="0.125" right="0.375" top="0.125" bottom="0.25"/>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="BOTTOMRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="BOTTOMLEFT"/>
+          </Anchors>
+        </Texture>
+        <Texture parentKey="Left" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8"/><TexCoords left="0" right="0.125" top="0.25" bottom="0.75"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="BOTTOMLEFT"/>
+            <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="TOPLEFT"/>
+          </Anchors>
+        </Texture>
+        <Texture parentKey="Right" file="Interface\Tooltips\UI-Tooltip-Border">
+          <Size x="8"/><TexCoords left="0.375" right="0.5" top="0.25" bottom="0.75"/>
+          <Anchors>
+            <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="BOTTOMRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="TOPRIGHT"/>
+          </Anchors>
+        </Texture>
+      </Layer>
+      </Layers> 
     </Frame>
 
     <!-- inset frame template with a dark marble background -->
