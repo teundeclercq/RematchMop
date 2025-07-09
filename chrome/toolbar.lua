@@ -242,13 +242,19 @@ end
 -- wrapper for ever-changing cooldown methods (id is spellID for "spell", itemID for "item")
 function rematch.toolbar:SetCooldown(cooldown,cooldownType,id)
     if cooldownType=="spell" then
-        local info = C_Spell.GetSpellCooldown(id)
-        if info then
-            cooldown:SetCooldown(info.startTime,info.duration,info.modRate)
+        local start, duration, enable = GetSpellCooldown(id)
+        if start and duration and duration > 0 then
+            cooldown:SetCooldown(start, duration)
+        else
+            cooldown:Clear()
         end
     elseif cooldownType=="item" then
-        local startTime,duration = C_Item.GetItemCooldown(id)
-        cooldown:SetCooldown(startTime,duration)
+        local start, duration, enable = GetItemCooldown(id)
+        if start and duration and duration > 0 then
+            cooldown:SetCooldown(start, duration)
+        else
+            cooldown:Clear()
+        end
     end
 end
 
