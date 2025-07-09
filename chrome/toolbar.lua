@@ -29,10 +29,11 @@ rematch.toolbar.petSatchelButtons = {
 
 rematch.events:Register(rematch.toolbar,"PLAYER_LOGIN",function(self)
     -- steal the TopTileStreaks inherited from BasicFrameTemplate and put them behind the toolbar
-    rematch.frame.TopTileStreaks:SetParent(rematch.toolbar)
-    rematch.frame.TopTileStreaks:SetPoint("TOPLEFT")
-    rematch.frame.TopTileStreaks:SetPoint("TOPRIGHT")
-
+    if rematch.frame.TopTileStreaks then
+        rematch.frame.TopTileStreaks:SetParent(rematch.toolbar)
+        rematch.frame.TopTileStreaks:SetPoint("TOPLEFT")
+        rematch.frame.TopTileStreaks:SetPoint("TOPRIGHT")
+    end
     rematch.events:Register(self,"REMATCH_TEAM_LOADED",self.REMATCH_TEAM_LOADED)
     rematch.timer:Start(0.1,rematch.toolbar.CacheSafariHat)
 end)
@@ -239,6 +240,19 @@ function rematch.toolbar:PickBestStone(stoneList,defaultStone)
     return defaultStone
 end
 
+-- Helper function to find item cooldown by itemID in bags
+local function FindItemCooldown(itemID)
+    for bag = 0, 4 do
+        for slot = 1, C_Container.GetContainerNumSlots(bag) do
+            local id = C_Container.GetContainerItemID(bag, slot)
+            if id == itemID then
+                return C_Container.GetContainerItemCooldown(bag, slot)
+            end
+        end
+    end
+    return nil, nil, nil -- not found
+end
+
 -- wrapper for ever-changing cooldown methods (id is spellID for "spell", itemID for "item")
 function rematch.toolbar:SetCooldown(cooldown,cooldownType,id)
     if cooldownType=="spell" then
@@ -249,7 +263,7 @@ function rematch.toolbar:SetCooldown(cooldown,cooldownType,id)
             cooldown:Clear()
         end
     elseif cooldownType=="item" then
-        local start, duration, enable = GetItemCooldown(id)
+        local start, duration = FindItemCooldown(id)
         if start and duration and duration > 0 then
             cooldown:SetCooldown(start, duration)
         else

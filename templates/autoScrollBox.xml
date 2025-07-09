@@ -98,45 +98,45 @@
                 </Texture>
             </Layer>        
             <Layer level="BORDER" textureSubLevel="-1">
-                <Texture parentKey="TopLeft" atlas="UI-Frame-InnerTopLeft" useAtlasSize="true">
+                <Texture parentKey="TopLeft" file="Interface\DialogFrame\UI-DialogBox-Corner-TopLeft"  >
                     <Anchors>
                         <Anchor point="TOPLEFT"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="TopRight" atlas="UI-Frame-InnerTopRight" useAtlasSize="true">
+                <Texture parentKey="TopRight" file="Interface\DialogFrame\UI-DialogBox-Corner-TopRight"  >
                     <Anchors>
                         <Anchor point="TOPRIGHT" x="-18" y="0"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="Top" atlas="_UI-Frame-InnerTopTile" useAtlasSize="true">
+                <Texture parentKey="Top" file="Interface\DialogFrame\UI-DialogBox-Border-Top"  >
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="TOPRIGHT"/>
                         <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="TOPLEFT"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="BottomLeft" atlas="UI-Frame-InnerBotLeftCorner" useAtlasSize="true">
+                <Texture parentKey="BottomLeft" file="Interface\DialogFrame\UI-DialogBox-Corner-BottomLeft"  >
                     <Anchors>
                         <Anchor point="BOTTOMLEFT" x="0" y="-1"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="BottomRight" atlas="UI-Frame-InnerBotRight" useAtlasSize="true">
+                <Texture parentKey="BottomRight" file="Interface\DialogFrame\UI-DialogBox-Corner-BottomRight"  >
                     <Anchors>
                         <Anchor point="BOTTOMRIGHT" x="-18" y="-1"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="Bottom" atlas="_UI-Frame-InnerBotTile" useAtlasSize="true">
+                <Texture parentKey="Bottom" file="Interface\DialogFrame\UI-DialogBox-Border-Bottom"  >
                     <Anchors>
                         <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="BOTTOMRIGHT"/>
                         <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="BOTTOMLEFT"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="Left" atlas="!UI-Frame-InnerLeftTile" useAtlasSize="true">
+                <Texture parentKey="Left" file="Interface\DialogFrame\UI-DialogBox-Border-Left"  >
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeKey="$parent.TopLeft" relativePoint="BOTTOMLEFT"/>
                         <Anchor point="BOTTOMLEFT" relativeKey="$parent.BottomLeft" relativePoint="TOPLEFT"/>
                     </Anchors>
                 </Texture>
-                <Texture parentKey="Right" atlas="!UI-Frame-InnerRightTile" useAtlasSize="true">
+                <Texture parentKey="Right" file="Interface\DialogFrame\UI-DialogBox-Border-Right"  >
                     <Anchors>
                         <Anchor point="TOPRIGHT" relativeKey="$parent.TopRight" relativePoint="BOTTOMRIGHT"/>
                         <Anchor point="BOTTOMRIGHT" relativeKey="$parent.BottomRight" relativePoint="TOPRIGHT"/>

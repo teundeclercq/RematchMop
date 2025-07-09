@@ -62,7 +62,7 @@
                 <Size x="100" y="32"/>
 				<Layers>
 					<Layer level="BACKGROUND">
-						<Texture parentKey="Highlight" atlas="PetJournal-PetBattleAchievementGlow" hidden="true">
+						<Texture parentKey="Highlight" file="Interface\DialogFrame\PetJournal-PetBattleAchievementGlow" hidden="true">
 							<Anchors>
 								<Anchor point="TOP"/>
 							</Anchors>
@@ -83,13 +83,13 @@
 							</Anchors>
 							<TexCoords left="0" right=".5" top="0" bottom="0.5"/>
 						</Texture>
-						<Texture parentKey="RightFlair" atlas="PetJournal-PetBattleAchievementBG">
+						<Texture parentKey="RightFlair" file="Interface\PetBattles\PetJournalBits\petJournal-PetBattleAchievementBG">
 							<Size x="39" y="15"/>
 							<Anchors>
 								<Anchor point="RIGHT" relativeKey="$parent.Text" relativePoint="LEFT" x="0" y="0"/>
 							</Anchors>
 						</Texture>
-						<Texture parentKey="LeftFlair" atlas="PetJournal-PetBattleAchievementBG">
+						<Texture parentKey="LeftFlair" file="Interface\PetBattles\PetJournalBits\PetJournal-PetBattleAchievementBG">
 							<Size x="39" y="15"/>
 							<Anchors>
 								<Anchor point="LEFT" relativeKey="$parent.Text" relativePoint="RIGHT" x="32" y="0"/>

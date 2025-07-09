@@ -59,7 +59,7 @@
     <!-- little red titlebar buttons across top of window (pin, minimize/maximize, close, etc.) -->
     <Button name="RematchTitlebarButtonTemplate" mixin="RematchTitlebarButtonMixin" virtual="true">
         <Size x="22" y="22"/>
-		<HitRectInsets left="-2" right="-2" top="-2" bottom="-2"/>
+		<HitRectInsets left="-1" right="-2" top="-2" bottom="-2"/>
 		<NormalTexture file="Interface\AddOns\Rematch\Textures\titlebarbuttons"/>
 		<DisabledTexture file="Interface\AddOns\Rematch\Textures\titlebarbuttons"/>
 		<PushedTexture file="Interface\AddOns\Rematch\Textures\titlebarbuttons"/>

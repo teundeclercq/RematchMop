@@ -397,21 +397,20 @@ rematch.constants = {
     BACKUP_INTERVAL = 50, -- number of teams before asking if user wants to backup their teams
     -- sounds
     SOUND_DRAG_START = 688,
-    SOUND_DRAG_STOP = 689,
-    SOUND_REMATCH_OPEN = SOUNDKIT.IG_CHARACTER_INFO_OPEN,
-    SOUND_REMATCH_CLOSE = SOUNDKIT.IG_CHARACTER_INFO_CLOSE,
-    SOUND_PET_CARD = SOUNDKIT.IG_QUEST_LIST_SELECT,
-    SOUND_CHECKBUTTON = SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF,
-    SOUND_FLYOUT_OPEN = SOUNDKIT.UI_JOURNEYS_OPEN_LORE_BOOK,
-    SOUND_FLYOUT_CLOSE = SOUNDKIT.UI_JOURNEYS_CLOSE_LORE_BOOK,
-    SOUND_HEADER_CLICK = SOUNDKIT.UI_PROFESSION_SPEC_PATH_SELECT,
-    SOUND_DIALOG_OPEN = SOUNDKIT.UI_CLASS_TALENT_OPEN_WINDOW,
-    SOUND_DIALOG_CLOSE = SOUNDKIT.UI_CLASS_TALENT_CLOSE_WINDOW,
-    SOUND_PANEL_TAB = SOUNDKIT.UI_TOYBOX_TABS,
-    SOUND_TEAM_LOAD = SOUNDKIT.IG_QUEST_LIST_SELECT,
-    SOUND_SATCHEL = SOUNDKIT.IG_BACKPACK_OPEN,
-    SOUND_GENERIC_OPEN = SOUNDKIT.UI_JOURNEYS_OPEN_LORE_BOOK,
-    SOUND_GENERIC_CLOSE = SOUNDKIT.UI_JOURNEYS_CLOSE_LORE_BOOK,
+    SOUND_DRAG_STOP = 689,    SOUND_REMATCH_OPEN = 852, -- IG_CHARACTER_INFO_OPEN
+    SOUND_REMATCH_CLOSE = 853, -- IG_CHARACTER_INFO_CLOSE
+    SOUND_PET_CARD = 857, -- IG_QUEST_LIST_SELECT
+    SOUND_CHECKBUTTON = 856, -- IG_MAINMENU_OPTION_CHECKBOX_OFF
+    SOUND_FLYOUT_CLOSE = 883, -- Generic Book/Page close sound
+    SOUND_HEADER_CLICK = 1115, -- UI_PROFESSIONS_WINDOW_OPEN or similar
+    SOUND_DIALOG_OPEN = 1200, -- Generic dialog open (safe default)
+    SOUND_DIALOG_CLOSE = 1201, -- Generic dialog close (safe default)
+    SOUND_PANEL_TAB = 841, -- UI_TALENT_TABS (generic tab click)
+    SOUND_TEAM_LOAD = 857, -- IG_QUEST_LIST_SELECT
+    SOUND_SATCHEL = 893, -- IG_BACKPACK_OPEN
+    SOUND_GENERIC_OPEN = 882, -- Book open
+    SOUND_GENERIC_CLOSE = 883, -- Book close
+
     -- help text
     HELP_TEXT_PET_FILTER = L["In addition to the filters in this menu, you can further refine the pet list with the search box. Some search examples:\n\nPets: %sBlack Tabby\124r\nZones: %sSilithus\124r\nAbilities: %sSandstorm\124r\nText in abilities: %sBleed\124r\nLevels: %slevel=21-23\124r\nStats: %sspeed>300\124r\n\nSearches in \"quotes\" will limit results to only complete matches.\n\nSearch results will be sorted by relevance unless the option %sDon't Sort By Relevance\124r is checked in the Options tab."],
     HELP_TEXT_MULTI_CHECK = L["In filter menus, checkbox groups assume if nothing is checked you want to view all choices.\n\nYou can also:\n\n%s[Shift]+Click\124r to check all except the box clicked.\n\n%s[Alt]+Click\124r to uncheck all except the box clicked."],

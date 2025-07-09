@@ -12,6 +12,7 @@
         "utf8": "disable"
     },
     "Lua.workspace.library": [
+        "~/Documents/BlizzardInterfaceResources/Resources",
         "~/.vscode/extensions/ketho.wow-api-0.20.8/Annotations/Core"
     ],
     "Lua.diagnostics.globals": [
@@ -120,7 +121,19 @@
         "ITEM_QUALITY_COLORS",
         "ChatEdit_InsertLink",
         "GetBattlePetAbilityHyperlink",
-        "AuctionHouseFrame"
+        "AuctionHouseFrame",
+        "UIParent",
+        "Minimap",
+        "cos",
+        "sin",
+        "GetCVarBool",
+        "CopyTable",
+        "CreateColor",
+        "GameFontNormal",
+        "GameFontHighlight",
+        "GetCVar",
+        "tContains",
+        "Mixin"
     ],
     "Lua.type.weakUnionCheck": true
 }

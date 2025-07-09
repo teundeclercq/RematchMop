@@ -42,13 +42,14 @@
                         </MaskTexture>
                     </Layer>
                     <!-- the portrait border -->
-                    <Layer level="OVERLAY" textureSubLevel="2">
-                        <Texture atlas="UI-Frame-PortraitMetal-CornerTopLeft" useAtlasSize="true">
+                   <Layer level="OVERLAY" textureSubLevel="2">
+                        <Texture file="Interface\DialogFrame\UI-DialogBox-Corner-TopLeft">
+                            <Size x="32" y="32"/>
                             <Anchors>
                                 <Anchor point="TOPLEFT" x="-14" y="16"/>
                             </Anchors>
                         </Texture>
-                    </Layer>
+                    </Layer> 
                 </Layers>
             </Frame>
             <Button parentKey="CloseButton" inherits="RematchTitlebarButtonTemplate">

@@ -323,7 +323,7 @@ end
 function rematch.targetInfo:GetQuestName(npcID)
     local _,_,_,questID = rematch.targetInfo:GetNpcInfo(npcID)
     if questID then
-        local name = C_TaskQuest.GetQuestInfoByQuestID(questID) or C_QuestLog.GetTitleForQuestID(questID)
+        local name = C_TaskQuest.GetQuestInfoByQuestID(questID)
         return name --or C.CACHE_RETRIEVING
     end
 end

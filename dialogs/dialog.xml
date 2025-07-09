@@ -172,7 +172,7 @@
             </Layer>
             <Layer level="OVERLAY">
                 <!-- favorite star in topleft corner-->
-                <Texture parentKey="Favorite" atlas="PetJournal-FavoritesIcon">
+                <Texture parentKey="Favorite" file="Interface\Common\FavoritesIcon\PetJournal-FavoritesIcon">
                     <Size x="21" y="21"/>
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeKey="$parent.Border" relativePoint="TOPLEFT" x="-6" y="7"/>
