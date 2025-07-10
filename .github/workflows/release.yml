@@ -22,8 +22,10 @@ jobs:
 
       - name: Zip addon
         run: |
-          mkdir -p build
-          zip -r "build/${{ steps.vars.outputs.ZIP_NAME }}" Rematch_MoP
+          mkdir -p build/RematchMop
+          cp -r * build/RematchMop
+          cd build
+          zip -r "${{ steps.vars.outputs.zip_name }}" RematchMop
 
       - name: Upload to CurseForge
         env:
