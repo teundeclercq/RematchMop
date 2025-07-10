@@ -1,0 +1,37 @@
+name: Release to CurseForge
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on tags like v1.0.0
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set zip name
+        id: vars
+        run: |
+          TAG_NAME=${GITHUB_REF##*/}
+          ZIP_NAME="Rematch_MoP-${TAG_NAME}.zip"
+          echo "ZIP_NAME=${ZIP_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Zip addon
+        run: |
+          mkdir -p build
+          zip -r "build/${{ steps.vars.outputs.ZIP_NAME }}" Rematch_MoP
+
+      - name: Upload to CurseForge
+        uses: BryCantWait/curseforge-upload@v3
+        with:
+          api-token: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          project-id: ${{ secrets.CF_PROJECT_ID }}
+          game-id: ${{ secrets.CF_GAME_ID }}
+          file-path: build/${{ steps.vars.outputs.ZIP_NAME }}
+          release-type: ${{ secrets.CF_FILE_RELEASE_TYPE }}
+          changelog: "See changes at https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}"
+          changelog-type: text
