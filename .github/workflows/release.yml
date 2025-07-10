@@ -23,7 +23,7 @@ jobs:
       - name: Zip addon
         run: |
           mkdir -p build/RematchMop
-          cp -r * build/RematchMop
+          rsync -av --exclude 'build' ./ build/RematchMop/ 
           cd build
           zip -r "${{ steps.vars.outputs.zip_name }}" RematchMop
 
