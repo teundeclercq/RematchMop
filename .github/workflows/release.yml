@@ -26,12 +26,18 @@ jobs:
           zip -r "build/${{ steps.vars.outputs.ZIP_NAME }}" Rematch_MoP
 
       - name: Upload to CurseForge
-        uses: BryCantWait/curseforge-upload@v3
-        with:
-          api-token: ${{ secrets.CURSEFORGE_API_TOKEN }}
-          project-id: ${{ secrets.CF_PROJECT_ID }}
-          game-id: ${{ secrets.CF_GAME_ID }}
-          file-path: build/${{ steps.vars.outputs.ZIP_NAME }}
-          release-type: ${{ secrets.CF_FILE_RELEASE_TYPE }}
-          changelog: "See changes at https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}"
-          changelog-type: text
+        env:
+          API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          PROJECT_ID: ${{ secrets.CF_PROJECT_ID }}
+          GAME_ID: ${{ secrets.CF_GAME_ID }}
+          RELEASE_TYPE: ${{ secrets.CF_FILE_RELEASE_TYPE }}
+          FILE_PATH: build/${{ steps.vars.outputs.zip_name }}
+        run: |
+          curl -X POST "https://wow.curseforge.com/api/projects/${PROJECT_ID}/upload-file" \
+            -H "x-api-token: ${API_TOKEN}" \
+            -F "file=@${FILE_PATH}" \
+            -F "gameVersions=1" \
+            -F "releaseType=${RELEASE_TYPE}" \
+            -F "displayName=Release ${{ github.ref_name }}" \
+            -F "changelog=Auto-release for ${{ github.ref_name }}" \
+            -F "changelogType=text"
